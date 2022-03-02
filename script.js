@@ -20,7 +20,7 @@ let score = [0, 0]
 // EVENTS
 rollBtn.addEventListener('click', rollDice)
 holdBtn.addEventListener('click', hold)
-
+newBtn.addEventListener('click', reset)
 // FUNCTIONS
 function rollDice() {
     dice.style.display = 'block'
@@ -49,15 +49,10 @@ function changePlayer() {
     document.querySelector('.player--1').classList.toggle('player--active')
 }
 
-
-
-// NIMAGA TEVADA CHAQIRIB OLINGAN ID NI PASTDA YANA CHAQIRIB OLDIK??????????????????????????????????????????????????????????????????????????????????????
-// document.querySelector(`#score--${activePlayer}`).textContent = currentScore bunga mas score[activePlayer] bunga tenglemiz
-
-
-
-
-
-
-
-
+function reset(){
+    dice.style.display = 'none'
+    scorePlayer1.textContent = "0"
+    currentPlayer1.textContent = "0"
+    scorePlayer2.textContent = "0"
+    currentPlayer2.textContent = "0"
+}
