@@ -39,6 +39,9 @@ function hold(){
     score[activePlayer] += currentScore
     document.querySelector(`#score--${activePlayer}`).textContent = score[activePlayer]
     changePlayer()
+    if(scorePlayer1 > 20){
+        scorePlayer1.classList.add('player--winner') 
+    } 
 }
 
 function changePlayer() {
@@ -56,3 +59,16 @@ function reset(){
     scorePlayer2.textContent = "0"
     currentPlayer2.textContent = "0"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
