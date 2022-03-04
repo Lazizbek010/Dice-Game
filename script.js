@@ -5,13 +5,11 @@ let holdBtn = document.querySelector('.btn--hold')
 // TEXTCONTENT
 let scorePlayer1 = document.querySelector('#score--0')
 let currentPlayer1 = document.querySelector('#current--0')
-
 let scorePlayer2 = document.querySelector('#score--1')
 let currentPlayer2 = document.querySelector('#current--1')
 // RANDOM IMG
 let dice = document.querySelector('.dice')
 dice.style.display = 'none'
-
 // CHANGES
 let currentScore = 0    
 let activePlayer = 0
@@ -40,7 +38,7 @@ function hold(){
     if(!gameOver){
         score[activePlayer] += currentScore
         document.querySelector(`#score--${activePlayer}`).textContent = score[activePlayer]
-        if(score[activePlayer] >= 20){
+        if(score[activePlayer] >= 100){
             gameOver = true
             document.querySelector('.player--0').classList.remove('player--active')
             document.querySelector('.player--1').classList.remove('player--active')
